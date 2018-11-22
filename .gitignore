@@ -1,0 +1,6 @@
+
+\.idea/
+
+classifier/__pycache__/
+
+\.DS_Store
