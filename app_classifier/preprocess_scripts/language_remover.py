@@ -1,20 +1,18 @@
 import pandas as pd
-import sys
 from polyglot.detect import Detector
 
-_accepted_langs = ['English', 'un']
-_filepath = sys.argv[0]
-_test_col = sys.argv[1]
-if __name__ == "__main__":
 
-    dataset = pd.read_csv(_filepath)
+# Tests for languages in specified column of csv file and removes row
+#   if language is not in accepted languages
+def lang_remove_csv(accepted_langs: list, csv_file: str, test_col: str):
+    dataset = pd.read_csv(csv_file)
     to_remove = set()
 
     for index, row in dataset.iterrows():
         try:
-            languages = Detector(row[_test_col]).languages
+            languages = Detector(row[test_col]).languages
             for language in languages:
-                if language.name not in _accepted_langs:
+                if language.name not in accepted_langs:
                     to_remove.add(index)
         except:
             to_remove.add(index)
@@ -24,4 +22,4 @@ if __name__ == "__main__":
     for stuff in to_remove:
         print(dataset.loc[stuff])
     dataset.drop(to_remove, inplace=True)
-    dataset.to_csv(_filepath, index=False)
+    dataset.to_csv(csv_file, index=False)
