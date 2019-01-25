@@ -33,4 +33,4 @@ predict_category ('this is the apps description')
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU Affero General Public License - see the [LICENSE.md](LICENSE.md) file for details
