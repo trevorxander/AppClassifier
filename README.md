@@ -1,10 +1,36 @@
-# AppClassifier
-Classifies apps into categories based on their description using a Naive Bayes classifier.
+# App Classifier
 
-## Naive Bayes Model
+Classifies app based on app description.
+
+## Getting Started
+
+These instructions will get you a copy of the app classifier up and running on your local machine for development and testing purposes.
+
+### Installing
+
+Clone the rep:
+```
+git clone https://github.com/trevorxander/AppClassifier.git
+```
+Install dependencies:
+
+```
+pip3 install ./AppClassifier
+```
+
+### Usage
+Import predict function:
+
+```
+from app_classifier import predict_category
+```
 
 
+Make prediction:
+```
+predict_category ('this is the apps description')
+```
 
+## License
 
-
-### Assumptions
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
