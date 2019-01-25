@@ -1,1 +1,2 @@
 from app_classifier import naive_bayes
+from app_classifier.classifier import predict_category
