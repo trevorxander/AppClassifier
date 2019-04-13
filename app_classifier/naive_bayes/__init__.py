@@ -1,1 +1,2 @@
-from app_classifier.naive_bayes.multinomial import MultinomialNBClassifier
+from app_classifier.naive_bayes.multinomial_model import Model
+from app_classifier.naive_bayes.trainer import train_from_csv
